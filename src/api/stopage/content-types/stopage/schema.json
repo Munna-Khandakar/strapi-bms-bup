@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stopages",
+  "info": {
+    "singularName": "stopage",
+    "pluralName": "stopages",
+    "displayName": "Stopage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
