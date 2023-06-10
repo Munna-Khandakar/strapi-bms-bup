@@ -4,7 +4,8 @@
   "info": {
     "singularName": "trip",
     "pluralName": "trips",
-    "displayName": "Trip"
+    "displayName": "Trip",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,13 +17,14 @@
       "enum": [
         "started",
         "canceled",
-        "finished"
+        "finished",
+        "created"
       ]
     },
     "stopages": {
       "type": "json"
     },
-    "devices": {
+    "statusMap": {
       "type": "json"
     },
     "driver_id": {
@@ -32,6 +34,24 @@
       "type": "string"
     },
     "route_id": {
+      "type": "string"
+    },
+    "driver": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "route": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "message": {
       "type": "string"
     }
   }
